@@ -110,9 +110,15 @@ python main.py
 
 `[Monitoramento] → [Ingestão Bronze] → [Transformação Silver] → [Apresentação Gold] → [Power BI]`
 
----
+## 7. Painel de Monitoramento
 
-## 7. Melhorias Futuras
+
+<img width="753" height="768" alt="image" src="https://github.com/user-attachments/assets/0f91673b-e35b-4c9a-8b88-22f6d412cdc4" />
+
+
+## 8. Melhori
+
+as Futuras
 
 - Implementação de arquitetura Kappa para streaming  
 - Escalabilidade horizontal com particionamento e paralelismo  
