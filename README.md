@@ -63,9 +63,9 @@ A arquitetura segue o conceito **Bronze → Silver → Gold**, com camadas bem d
 - **Extração de Dados**: APIs, CSVs, fontes públicas e privadas  
 - **Ingestão**: Lotes automatizados via ETL  
 - **Armazenamento**: BigQuery (cloud) – escalável e de alto desempenho  
-- **Observabilidade**: Logs, alertas e rastreabilidade  
+- **Observabilidade**: Logs, alertas e rastreabilidade (Implantar) 
 - **Segurança**: Criptografia, controle de acesso e conformidade com LGPD  
-- **Mascaramento de Dados**: Anonimização de campos sensíveis  
+- **Mascaramento de Dados**: Anonimização de campos sensíveis (Utilizado apenas para dados sensíveis de acordo com a governança e LGPD)
 - **Escalabilidade**: Arquitetura pronta para expansão horizontal e vertical  
 
 ---
@@ -80,6 +80,8 @@ A arquitetura segue o conceito **Bronze → Silver → Gold**, com camadas bem d
 | Linguagem            | Python                  |
 | Modelagem Preditiva  | ARIMA                   |
 | Armazenamento Bruto  | Cloud Storage           |
+
+---
 
 ## 5. 📁 Organização dos Notebooks
 
@@ -110,6 +112,8 @@ Reúne os notebooks que tratam da ingestão dos dados extraídos, incluindo limp
 
 Essa estrutura modular permite que cada etapa do fluxo de dados seja facilmente identificada, testada e reutilizada. Para contribuir com novos notebooks, recomenda-se seguir essa divisão temática.
 
+---
+
 ## 6. Como Executar
 
 ### 6.1 Pré-requisitos
@@ -136,11 +140,14 @@ pip install -r requirements.txt
 
 `[Monitoramento] → [Ingestão Bronze] → [Transformação Silver] → [Apresentação Gold] → [Power BI]`
 
+---
+
 ## 8. Painel de Monitoramento
 
 
 <img width="753" height="768" alt="image" src="https://github.com/user-attachments/assets/0f91673b-e35b-4c9a-8b88-22f6d412cdc4" />
 
+---
 
 ## 9. Melhorias Futuras
 
