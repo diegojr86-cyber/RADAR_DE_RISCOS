@@ -81,44 +81,68 @@ A arquitetura segue o conceito **Bronze → Silver → Gold**, com camadas bem d
 | Modelagem Preditiva  | ARIMA                   |
 | Armazenamento Bruto  | Cloud Storage           |
 
----
+## 5. 📁 Organização dos Notebooks
 
-## 5. Como Executar
+Este repositório está estruturado para facilitar a navegação e compreensão dos diferentes estágios do pipeline de dados. Os notebooks foram agrupados em pastas conforme sua função principal:
 
-### 5.1 Pré-requisitos
+### 5.1 `extracao/`
+
+Contém os notebooks responsáveis por coletar dados de fontes externas, como APIs, arquivos brutos ou bancos de dados.
+
+| Arquivo                                    | Descrição breve                           |
+|--------------------------------------------|-------------------------------------------|
+| `01_dados_bacen_extracao_arquivo.ipynb`    | Extração inicial de dados da fonte X      |
+| `05_dados_estado_serasa_SIMULACAO.ipynb`   | Coleta de dados complementares da fonte Y |
+| `08_cria_depara_de_codigo_modalidade.ipynb`| Extração incremental e atualização        |
+
+### 5.2 `ingestao/`
+
+Reúne os notebooks que tratam da ingestão dos dados extraídos, incluindo limpeza, padronização e armazenamento em sistemas internos.
+
+| Arquivo                                                           | Descrição breve                                  |  
+|-------------------------------------------------------------------|--------------------------------------------------|
+| `03_Importa_arquivo_para_bucket_BQ.ipynb`                         | Pré-processamento e normalização dos dados       |
+| `04_importa_arquivo_do_bucket_para_bronze.ipynb`                  | Validação de formatos e tipos                    |
+| `06_Importa_arquivo_inadim_estimada_para_bucket_BQ.ipynb`         | Enriquecimento com dados auxiliares              |
+| `07_importa_arquivo_inadim_estimada_uf_bucket_para_bronze.ipynb`  | Carga em banco de dados                          |
+| `09_Importa_arquivo_depara_modalidade_para_bucket_BQ.ipynb`       | Monitoramento da ingestão                        |
+| `10_importa_arquivo_depara_modalidade_bucket_para_bronze.ipynb`   | Log e auditoria dos processos de ingestão        |
+
+Essa estrutura modular permite que cada etapa do fluxo de dados seja facilmente identificada, testada e reutilizada. Para contribuir com novos notebooks, recomenda-se seguir essa divisão temática.
+
+## 6. Como Executar
+
+### 6.1 Pré-requisitos
 - Conta no Google Cloud Platform  
 - Python 3.9+  
 - Power BI Desktop  
 
-### 5.2 Passos
+### 6.2 Passos
 
 ```bash
-git clone https://github.com/seuusuario/radar-de-risco.git
+git clone https://github.com/diegojr86-cyber/RADAR_DE_RISCOS.git
 cd radar-de-risco
 pip install -r requirements.txt
 ```
-
 - Configure variáveis de ambiente (credenciais e configs)  
 - Execute o pipeline ETL:  
 ```bash
-python main.py
+    python main.py
 ```
 
 ---
 
-## 6. Exemplo de Fluxo de Dados
+## 7. Exemplo de Fluxo de Dados
 
 `[Monitoramento] → [Ingestão Bronze] → [Transformação Silver] → [Apresentação Gold] → [Power BI]`
 
-## 7. Painel de Monitoramento
+## 8. Painel de Monitoramento
 
 
 <img width="753" height="768" alt="image" src="https://github.com/user-attachments/assets/0f91673b-e35b-4c9a-8b88-22f6d412cdc4" />
 
 
-## 8. Melhori
-
-as Futuras
+## 9. Melhorias Futuras
 
 - Implementação de arquitetura Kappa para streaming  
 - Escalabilidade horizontal com particionamento e paralelismo  
@@ -133,13 +157,5 @@ as Futuras
 
 **Diego de Jesus Rodrigues** – Engenharia de Dados
 
----
 
-## O Que Incluir para Impressionar a Banca
-
-- ✅ Diagrama da arquitetura (Bronze → Silver → Gold com ferramentas envolvidas)  
-- ✅ Testes e validação (ex: pytest, great_expectations)  
-- ✅ Governança de dados (versionamento, catalogação, metadados)  
-- ✅ Performance e custo (particionamento, compressão, otimização no BigQuery)  
-- ✅ Licença e escopo de uso (MIT, Apache 2.0, educacional ou corporativo)
 
