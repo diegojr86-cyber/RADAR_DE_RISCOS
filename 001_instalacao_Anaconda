@@ -1,0 +1,108 @@
+
+## 🚀 Instalação do Anaconda3-2025.06-0 no Windows
+
+Este guia descreve o processo completo para instalar o **Anaconda3-2025.06-0-Windows-x86_64.exe** em máquinas com sistema operacional Windows 10 ou superior.
+
+---
+
+## 📦 Pré-requisitos
+
+- Sistema operacional: Windows 10 ou superior (64 bits)
+- Espaço em disco: mínimo de 3 GB livres
+- Permissões de administrador para instalação
+
+---
+
+## 🔽 1. Download do instalador
+
+Baixe o instalador oficial do Anaconda:
+
+**Arquivo:** `Anaconda3-2025.06-0-Windows-x86_64.exe`  
+**Fonte recomendada:** [https://www.anaconda.com/products/distribution](https://www.anaconda.com/products/distribution)
+
+---
+
+## 🛠️ 2. Executar o instalador
+
+1. Localize o arquivo baixado e **clique duas vezes** para iniciar.
+2. Na tela de boas-vindas, clique em **Next**.
+3. Aceite os termos de licença (**I Agree**).
+4. Escolha a opção de instalação:
+   - **Just Me** (recomendado para usuários individuais)
+   - **All Users** (requer permissões de administrador)
+5. Escolha o diretório de instalação (ex: `C:\ProgramData\Anaconda3` ou `C:\Users\SeuUsuario\Anaconda3`).
+6. Na tela de opções avançadas:
+   - ✅ Marque **Add Anaconda to my PATH environment variable** (recomendado)
+   - ✅ Marque **Register Anaconda as my default Python 3.12** (recomendado)
+7. Clique em **Install** e aguarde a conclusão.
+
+---
+
+## ✅ 3. Verificar instalação
+
+Após a instalação:
+
+- Abra o **Prompt de Comando** ou **PowerShell**
+- Digite:
+
+```bash
+conda --version
+```
+
+Você deve ver algo como:
+
+```
+conda 24.5.0
+```
+
+---
+
+## 🧪 4. Testar ambiente Jupyter
+
+1. Abra o **Anaconda Navigator** (instalado junto com o pacote)
+2. Clique em **Launch** no ícone do **Jupyter Notebook**
+3. Um navegador será aberto com a interface do Jupyter
+4. Crie um novo notebook e teste com:
+
+```python
+print("Anaconda instalado com sucesso!")
+```
+
+---
+
+## 🧼 5. (Opcional) Atualizar Conda
+
+Para garantir que o Conda esteja atualizado:
+
+```bash
+conda update conda
+```
+
+---
+
+## 🧠 Dica extra: Criar ambiente virtual
+
+```bash
+conda create -n bacen_env python=3.12
+conda activate bacen_env
+```
+
+---
+
+## 🆘 Suporte
+
+Se houver problemas na instalação:
+
+- Verifique se o antivírus bloqueou o instalador
+- Execute como administrador
+- Consulte os fóruns oficiais: [https://community.anaconda.cloud](https://community.anaconda.cloud)
+
+---
+
+## 📌 Versão do instalador
+
+- Nome: `Anaconda3-2025.06-0-Windows-x86_64.exe`
+- Python: 3.12
+- Data de lançamento: Junho de 2025
+```
+
