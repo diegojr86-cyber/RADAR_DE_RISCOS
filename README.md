@@ -91,11 +91,11 @@ Este repositório está estruturado para facilitar a navegação e compreensão 
 
 Contém os notebooks responsáveis por coletar dados de fontes externas, como APIs, arquivos brutos ou bancos de dados.
 
-| Arquivo                                    | Descrição breve                           |
-|--------------------------------------------|-------------------------------------------|
-| `01_dados_bacen_extracao_arquivo.ipynb`    | Extração inicial de dados da fonte X      |
-| `05_dados_estado_serasa_SIMULACAO.ipynb`   | Coleta de dados complementares da fonte Y |
-| `08_cria_depara_de_codigo_modalidade.ipynb`| Extração incremental e atualização        |
+| Arquivo                                    | Descrição breve                                |
+|--------------------------------------------|------------------------------------------------|
+| `01_dados_bacen_extracao_arquivo.ipynb`    | Extração inicial de dados da fonte bacen       |
+| `05_dados_estado_serasa_SIMULACAO.ipynb`   | Coleta de dados complementares da fonte SERASA |
+| `08_cria_depara_de_codigo_modalidade.ipynb`| Extração incremental e atualização de DEPARA   |
 
 ### 5.2 `ingestao/`
 
@@ -104,11 +104,11 @@ Reúne os notebooks que tratam da ingestão dos dados extraídos, incluindo limp
 | Arquivo                                                           | Descrição breve                                  |  
 |-------------------------------------------------------------------|--------------------------------------------------|
 | `03_Importa_arquivo_para_bucket_BQ.ipynb`                         | Pré-processamento e normalização dos dados       |
-| `04_importa_arquivo_do_bucket_para_bronze.ipynb`                  | Validação de formatos e tipos                    |
-| `06_Importa_arquivo_inadim_estimada_para_bucket_BQ.ipynb`         | Enriquecimento com dados auxiliares              |
+| `04_importa_arquivo_do_bucket_para_bronze.ipynb`                  | Ingestão cloud camada bronze                     |
+| `06_Importa_arquivo_inadim_estimada_para_bucket_BQ.ipynb`         | Pré-processamento e normalização dos dados       |
 | `07_importa_arquivo_inadim_estimada_uf_bucket_para_bronze.ipynb`  | Carga em banco de dados                          |
-| `09_Importa_arquivo_depara_modalidade_para_bucket_BQ.ipynb`       | Monitoramento da ingestão                        |
-| `10_importa_arquivo_depara_modalidade_bucket_para_bronze.ipynb`   | Log e auditoria dos processos de ingestão        |
+| `09_Importa_arquivo_depara_modalidade_para_bucket_BQ.ipynb`       | Pré-processamento e normalização dos dados       |
+| `10_importa_arquivo_depara_modalidade_bucket_para_bronze.ipynb`   | Ingestão cloud camada bronze                     |
 
 Essa estrutura modular permite que cada etapa do fluxo de dados seja facilmente identificada, testada e reutilizada. Para contribuir com novos notebooks, recomenda-se seguir essa divisão temática.
 
