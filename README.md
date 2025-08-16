@@ -117,9 +117,10 @@ Essa estrutura modular permite que cada etapa do fluxo de dados seja facilmente 
 ## 6. Como Executar
 
 ### 6.1 Pré-requisitos
-- Conta no Google Cloud Platform  
+- Conta no Google Cloud Platform  (passo a passo:  002_criar_ambiente_BQ)
 - Python 3.9+  
 - Power BI Desktop  
+- Anaconda Navigator (passo a passo:  001_instalacao_Anaconda)
 
 ### 6.2 Passos
 
@@ -131,8 +132,10 @@ pip install -r requirements.txt
 - Configure variáveis de ambiente (credenciais e configs)  
 - Execute o pipeline ETL:  
 ```bash
-    python main.py
+  main.py
 ```
+Executar via Jupyter/Notebook 
+--- Este processo assegura plena observabilidade sobre as etapas de coleta e ingestão de dados, permitindo o acompanhamento contínuo e em tempo real do fluxo de informações. Com isso, é possível identificar rapidamente eventuais falhas, gargalos ou desvios, promovendo maior confiabilidade, rastreabilidade e eficiência operacional.
 
 ---
 
