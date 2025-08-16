@@ -117,7 +117,7 @@ Essa estrutura modular permite que cada etapa do fluxo de dados seja facilmente 
 ## 6. Como Executar
 
 ### 6.1 Pré-requisitos
-- Conta no Google Cloud Platform  (passo a passo:  002_criar_ambiente_BQ)
+- Conta no Google Cloud Platform  (passo a passo:  002_criar_ambiente_BQ (ambiente +camadas + Bucket) -(ATUALIZAR) )
 - Python 3.9+  
 - Power BI Desktop  
 - Anaconda Navigator (passo a passo:  001_instalacao_Anaconda)
@@ -142,9 +142,13 @@ Executar via Jupyter/Notebook
 --- Este processo assegura plena observabilidade sobre as etapas de coleta e ingestão de dados, permitindo o acompanhamento contínuo e em tempo real do fluxo de informações. Com isso, é possível identificar rapidamente eventuais falhas, gargalos ou desvios, promovendo maior confiabilidade, rastreabilidade e eficiência operacional.
 
     ## PAINEL DE MONITORAMENTO
+    <img width="885" height="722" alt="image" src="https://github.com/user-attachments/assets/257e93ef-8b95-4361-ac04-1ec31d230796" />
 
-      [Pipeline_Monitoramento.bmp](https://github.com/user-attachments/files/21804728/Pipeline_Monitoramento.bmp)
+### 6.4 CRIAR CONSULTA PROGRAMADA BQ (ATUALIZAR)
 
+### 6.5 CRIAR CONSULTA PROGRAMADA BQ (ATUALIZAR)
+
+### 6.6 CRIAR GOLDEN SOURCE COM MODELO CALCULADO (ATUALIZAR)
 
 ---
 
@@ -154,7 +158,9 @@ Executar via Jupyter/Notebook
 
 ---
 
-## 8. Painel de Monitoramento
+## 8. Painel de Monitoramento POWER BI.
+
+Criar painel conectado na camada GOLD - Tabela: `case-radar-de-risco.camada_gold.projecao_inadimplencia_12_meses`
 
 
 <img width="753" height="768" alt="image" src="https://github.com/user-attachments/assets/0f91673b-e35b-4c9a-8b88-22f6d412cdc4" />
