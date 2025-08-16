@@ -130,12 +130,21 @@ cd radar-de-risco
 pip install -r requirements.txt
 ```
 - Configure variáveis de ambiente (credenciais e configs)  
+
+### 6.3 Monitoramento do Pipeline
+
 - Execute o pipeline ETL:  
 ```bash
   main.py
 ```
 Executar via Jupyter/Notebook 
+
 --- Este processo assegura plena observabilidade sobre as etapas de coleta e ingestão de dados, permitindo o acompanhamento contínuo e em tempo real do fluxo de informações. Com isso, é possível identificar rapidamente eventuais falhas, gargalos ou desvios, promovendo maior confiabilidade, rastreabilidade e eficiência operacional.
+
+    ## PAINEL DE MONITORAMENTO
+
+      [Pipeline_Monitoramento.bmp](https://github.com/user-attachments/files/21804728/Pipeline_Monitoramento.bmp)
+
 
 ---
 
@@ -156,7 +165,6 @@ Executar via Jupyter/Notebook
 
 - Implementação de arquitetura Kappa para streaming  
 - Escalabilidade horizontal com particionamento e paralelismo  
-- Painel de monitoramento dos scripts Python agendados no Windows  
 - Automação de deploy com CI/CD  
 - Inclusão de variáveis externas (Cadastro Positivo, CAGED, IPEA etc.)  
 - Treinamento e validação dos modelos com RMSE, MAPE e validação cruzada  
