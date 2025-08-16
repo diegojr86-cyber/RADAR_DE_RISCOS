@@ -142,7 +142,8 @@ Executar via Jupyter/Notebook
 --- Este processo assegura plena observabilidade sobre as etapas de coleta e ingestão de dados, permitindo o acompanhamento contínuo e em tempo real do fluxo de informações. Com isso, é possível identificar rapidamente eventuais falhas, gargalos ou desvios, promovendo maior confiabilidade, rastreabilidade e eficiência operacional.
 
     ## PAINEL DE MONITORAMENTO
-    <img width="885" height="722" alt="image" src="https://github.com/user-attachments/assets/257e93ef-8b95-4361-ac04-1ec31d230796" />
+    
+  <img width="885" height="722" alt="image" src="https://github.com/user-attachments/assets/257e93ef-8b95-4361-ac04-1ec31d230796" />
 
 ### 6.4 CRIAR CONSULTA PROGRAMADA BQ (ATUALIZAR)
 
