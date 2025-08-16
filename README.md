@@ -9,7 +9,7 @@ Desenvolvido com boas práticas de arquitetura, o projeto incorpora automação 
 
 Essa base tecnológica permite às instituições financeiras:
 
-- 📊 Antecipar movimentos de risco por região e produto  
+- 📊 Antecipar movimentos de risco por região e modalidade de produto de crédito  
 - 🧠 Apoiar decisões estratégicas de concessão, precificação e provisionamento  
 - 🛡️ Fortalecer modelos de risco e compliance com evidências históricas e projeções confiáveis  
 - 📍 Segmentar políticas de crédito por geografia e perfil, aumentando a eficiência operacional  
@@ -56,6 +56,18 @@ A arquitetura segue o conceito **Bronze → Silver → Gold**, com camadas bem d
 - Atualização da base Gold  
 - Logs e notificações  
 
+### 2.6 Diagrama de Arquitetura
+
+Abaixo está o desenho da arquitetura que representa o fluxo completo de dados, desde a ingestão até a visualização analítica. O pipeline foi projetado com foco em modularidade, escalabilidade e segurança, utilizando componentes nativos do GCP como Cloud Storage, BigQuery e IAM.
+
+O modelo segue boas práticas de engenharia de dados, com separação clara entre camadas, automação de processos e criptografia em trânsito e repouso. O controle de acesso é gerenciado via IAM, garantindo conformidade com a LGPD e rastreabilidade completa por meio de logs e auditorias.
+
+📌 *Esse desenho facilita a comunicação entre times técnicos e de negócio, além de servir como base para futuras integrações com orquestradores como Airflow e monitoramento via Cloud Logging.*
+
+## Atualizar o desenho após a melhoria aplicada (ATUALIZAR)
+
+  <img width="1910" height="974" alt="image" src="https://github.com/user-attachments/assets/c55bbcb9-ceed-4b54-a296-af188c37f14e" />
+
 ---
 
 ## 3. Requisitos Atendidos
@@ -63,8 +75,8 @@ A arquitetura segue o conceito **Bronze → Silver → Gold**, com camadas bem d
 - **Extração de Dados**: APIs, CSVs, fontes públicas e privadas  
 - **Ingestão**: Lotes automatizados via ETL  
 - **Armazenamento**: BigQuery (cloud) – escalável e de alto desempenho  
-- **Observabilidade**: Logs, alertas e rastreabilidade (Implantar) 
-- **Segurança**: Criptografia, controle de acesso e conformidade com LGPD  
+- **Observabilidade**: Logs, alertas e rastreabilidade
+- **Segurança**: Criptografia em trânsito e repouso, além de controle de acesso via IAM para garantir segurança dos dados. Está em conformidade com a LGPD, permitindo auditoria e anonimização.  
 - **Mascaramento de Dados**: Anonimização de campos sensíveis (Utilizado apenas para dados sensíveis de acordo com a governança e LGPD)
 - **Escalabilidade**: Arquitetura pronta para expansão horizontal e vertical  
 
@@ -170,6 +182,7 @@ Criar painel conectado na camada GOLD - Tabela: `case-radar-de-risco.camada_gold
 
 ## 9. Melhorias Futuras
 
+- Integração com Airflow para Orquestração e Monitoramento
 - Implementação de arquitetura Kappa para streaming  
 - Escalabilidade horizontal com particionamento e paralelismo  
 - Automação de deploy com CI/CD  
